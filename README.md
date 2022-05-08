@@ -25,3 +25,11 @@ qemu-riscv64 a.out
 ```
 
 For more details see: [https://saveriomiroddi.github.io/Quick-riscv-cross-compilation-and-emulation/](https://saveriomiroddi.github.io/Quick-riscv-cross-compilation-and-emulation/)
+
+## Aliases
+To set an handful of useful aliases run:
+```bash
+source configure_env
+```
+
+Now you can run `build filename.s`, `run exec.out` and `debug exec.out`.

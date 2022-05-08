@@ -1,0 +1,14 @@
+#!/bin/bash
+
+alias build="riscv64-unknown-linux-gnu-gcc -static -Wall --pedantic -O0 -g"
+alias run="qemu-riscv64"
+
+debug() {  # debug takes one parameter; can't be exported as alias
+	echo "Run \"attach $1\" in a new shell" &&
+	qemu-riscv64 -L /opt/riscv/sysroot/ -g 1234 $1 -S
+}
+
+attach() {
+	echo "Run \"target remote:1234\" inside gdb to attach to the running program" &&
+	riscv64-unknown-linux-gnu-gdb $1
+}
