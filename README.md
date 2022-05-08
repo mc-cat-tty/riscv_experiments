@@ -2,10 +2,19 @@
 
 1. Get QEMU-riscv64: `pacman -S qemu-arch-extra`
 2. Compile riscv-gnu-toolchain
-	1. `git clone https://github.com/riscv-collab/riscv-gnu-toolchain && cd riscv-gnu-toolchain`
-	2. Install dependencies: `sudo pacman -Syyu autoconf automake curl python3 libmpc mpfr gmp gawk base-devel bison flex texinfo gperf libtool patchutils bc zlib expat`
-	3. `./configure --prefix=/opt/riscv`
-	4. `make && make linux`
+	1. ```bash
+		git clone https://github.com/riscv-collab/riscv-gnu-toolchain && cd riscv-gnu-toolchain
+		```
+	2. Install dependencies:
+		```bash
+		sudo pacman -Syyu autoconf automake curl python3 libmpc mpfr gmp gawk base-devel bison flex texinfo gperf libtool patchutils bc zlib expat
+		```
+	3. ```bash
+		./configure --prefix=/opt/riscv
+		```
+	4. ```bash
+		make && make linux
+		```
 	5. add `export PATH="/opt/riscv/bin/:$PATH"` to the file .zshrc or .bashrc
 
 ### Test your environment
