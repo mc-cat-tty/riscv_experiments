@@ -1,6 +1,7 @@
 #!/bin/bash
 
 alias build="riscv64-unknown-linux-gnu-gcc -static -Wall --pedantic -O0 -g"
+alias dump="riscv64-unknown-linux-gnu-objdump -d"
 alias run="qemu-riscv64"
 
 debug() {  # debug takes one parameter; can't be exported as alias
