@@ -1,7 +1,6 @@
 .include "mylib.s"
 
 .text
-.globl exp
 exp:
 	# a0 -> base
 	# a1 -> exponent
